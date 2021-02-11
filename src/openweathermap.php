@@ -68,8 +68,17 @@ $weather = $owm->getWeather($ini['db_city'], $ini['db_ms'], $ini['db_lang']);
  * Affiche en mode débogage le contenu d’une variable – ici un objet et
  * donc sa structure
  */
-var_dump($weather);
+/**
+ * BACKUP: var_dump($weather);
+ */ 
 echo PHP_EOL;
+
+echo " CITY ";
+echo $weather->city->name;
+echo " ID ";
+echo $weather->city->id;
+echo " TEMPERATURE ";
+echo $weather->temperature;
 
 /**
  * Fin du fichier
@@ -81,4 +90,5 @@ echo PHP_EOL;
 echo 'DIR: ';
 echo __DIR__;
 echo PHP_EOL;
+
 ?>
